@@ -1,0 +1,1642 @@
+{
+  "Find the nearest facility in rural Bihar that can perform an emergency appendectomy": {
+    "question": "Find the nearest facility in rural Bihar that can perform an emergency appendectomy",
+    "intent": {
+      "search_text": "emergency appendectomy",
+      "state": "Bihar",
+      "city": null,
+      "facility_type": null,
+      "required_capabilities": [
+        "emergency",
+        "surgery"
+      ],
+      "specialties_needed": [
+        "general surgery"
+      ],
+      "min_trust_score": 60,
+      "urgency": "high"
+    },
+    "candidates_found": 4,
+    "careguide_message": "Given the urgent need for an emergency appendectomy, I strongly recommend going to Jalal Medical Center in Motihari, Bihar. This hospital offers 24x7 emergency services, including surgery, which matches your immediate need. Although they don't have an ICU, they can perform the necessary surgery. If your condition is life-threatening, please call 108 immediately. \u2014 CareGuide, by CareMap",
+    "emergency_note": "Call 108 immediately if life-threatening",
+    "facility_cards": [
+      {
+        "rank": 1,
+        "facility_name": "Jalal Medical Center",
+        "city": "Motihari",
+        "state": "Bihar",
+        "latitude": 26.648085,
+        "longitude": 84.93428,
+        "verdict": "VERIFIED & RECOMMENDED",
+        "what_they_offer": "24x7 emergency services, including surgery",
+        "concerns": "This facility lists surgery services but we couldn't confirm a surgeon on staff"
+      },
+      {
+        "rank": 2,
+        "facility_name": "Shree Pradhan Hospital",
+        "city": "Muzaffarpur",
+        "state": "Bihar",
+        "latitude": 26.105175,
+        "longitude": 85.370598,
+        "verdict": "USE WITH CAUTION",
+        "what_they_offer": "Emergency Service 24x7, General Surgery",
+        "concerns": "Limited information available about their emergency services"
+      },
+      {
+        "rank": 3,
+        "facility_name": "Joint & Sports Injury Clinic",
+        "city": "Patna",
+        "state": "Bihar",
+        "latitude": 25.616587,
+        "longitude": 85.053963,
+        "verdict": "NOT SUITABLE",
+        "what_they_offer": "Dedicated clinic for joints injury",
+        "concerns": "Not equipped for emergency appendectomy"
+      },
+      {
+        "rank": 4,
+        "facility_name": "A.R DENTAL EXPERT - Kishanganj Branch",
+        "city": "Kishanganj",
+        "state": "Bihar",
+        "latitude": 26.102652,
+        "longitude": 87.94313,
+        "verdict": "NOT SUITABLE",
+        "what_they_offer": "Multispecialty dental clinic",
+        "concerns": "Not equipped for emergency appendectomy"
+      }
+    ],
+    "chain_of_thought": [
+      "Step 1: Filtered facilities based on the ability to perform emergency appendectomies in rural Bihar.",
+      "Step 2: Evaluated each facility's emergency services, surgical capabilities, and ICU availability.",
+      "Step 3: Considered the urgency of the situation and the potential risks associated with each facility's limitations.",
+      "Step 4: Ranked facilities based on their suitability, with Jalal Medical Center being the most appropriate option despite some concerns."
+    ],
+    "facilities": [
+      {
+        "name": "Joint & Sports Injury Clinic",
+        "city": "Patna",
+        "state": "Bihar",
+        "facility_type": "clinic",
+        "lat": 25.616587,
+        "lng": 85.053963,
+        "trust_score": 75,
+        "trust_label": "GREEN",
+        "completeness_score": 75.0,
+        "description": "A dedicated clinic for the genuine treatment of joints injury.",
+        "has_emergency": true,
+        "has_surgery": true,
+        "has_icu": false,
+        "has_dialysis": false,
+        "has_neonatal": false,
+        "flags": {
+          "surgery_no_surgeon": false,
+          "icu_no_equipment": false,
+          "emergency_no_basics": true,
+          "specialty_no_specialist": false
+        }
+      },
+      {
+        "name": "Jalal Medical Center",
+        "city": "Motihari",
+        "state": "Bihar",
+        "facility_type": "hospital",
+        "lat": 26.648085,
+        "lng": 84.93428,
+        "trust_score": 75,
+        "trust_label": "GREEN",
+        "completeness_score": 75.0,
+        "description": "Emergency hospital offering 24x7 services and ambulance service.",
+        "has_emergency": true,
+        "has_surgery": true,
+        "has_icu": false,
+        "has_dialysis": false,
+        "has_neonatal": false,
+        "flags": {
+          "surgery_no_surgeon": true,
+          "icu_no_equipment": false,
+          "emergency_no_basics": false,
+          "specialty_no_specialist": false
+        }
+      },
+      {
+        "name": "A.R DENTAL EXPERT - Kishanganj Branch",
+        "city": "Kishanganj",
+        "state": "Bihar",
+        "facility_type": "clinic",
+        "lat": 26.102652,
+        "lng": 87.94313,
+        "trust_score": 75,
+        "trust_label": "GREEN",
+        "completeness_score": 75.0,
+        "description": "A.R DENTAL EXPERT is a multispecialty dental clinic with a Darbhanga branch located in Laheriasarai, Bihar.",
+        "has_emergency": true,
+        "has_surgery": true,
+        "has_icu": false,
+        "has_dialysis": false,
+        "has_neonatal": false,
+        "flags": {
+          "surgery_no_surgeon": false,
+          "icu_no_equipment": false,
+          "emergency_no_basics": true,
+          "specialty_no_specialist": false
+        }
+      },
+      {
+        "name": "Shree Pradhan Hospital",
+        "city": "Muzaffarpur",
+        "state": "Bihar",
+        "facility_type": "hospital",
+        "lat": 26.105175,
+        "lng": 85.370598,
+        "trust_score": 75,
+        "trust_label": "GREEN",
+        "completeness_score": 62.5,
+        "description": "Emergency Service 24x7; Trauma Care, Orthopaedic, Obstetrics and Gynecology, General Surgery, Pharmacy, Radiology, Pediatrics, Path Lab, Anesthesiology, Neurosurgery.",
+        "has_emergency": true,
+        "has_surgery": true,
+        "has_icu": false,
+        "has_dialysis": false,
+        "has_neonatal": false,
+        "flags": {
+          "surgery_no_surgeon": false,
+          "icu_no_equipment": false,
+          "emergency_no_basics": true,
+          "specialty_no_specialist": false
+        }
+      }
+    ]
+  },
+  "Show me trusted eye hospitals in Hyderabad": {
+    "question": "Show me trusted eye hospitals in Hyderabad",
+    "intent": {
+      "search_text": "eye hospitals",
+      "state": "Telangana",
+      "city": "Hyderabad",
+      "facility_type": "hospital",
+      "required_capabilities": [],
+      "specialties_needed": [
+        "ophthalmology"
+      ],
+      "min_trust_score": 60,
+      "urgency": "medium"
+    },
+    "candidates_found": 10,
+    "careguide_message": "For your eye care needs in Hyderabad, I recommend going to Bommineni Hospitals in Kokapet. They offer a range of medical services, including those that can cater to eye care, and have a strong reputation. While they may not specialize exclusively in eye care, their general medical capabilities make them a trustworthy option. \u2014 CareGuide, by CareMap",
+    "emergency_note": null,
+    "facility_cards": [
+      {
+        "rank": 1,
+        "facility_name": "Bommineni Hospitals",
+        "city": "Hyderabad",
+        "state": "Telangana",
+        "latitude": 17.394073,
+        "longitude": 78.339813,
+        "verdict": "VERIFIED & RECOMMENDED",
+        "what_they_offer": "General medical services that can cater to eye care needs",
+        "concerns": "Verified \u2014 no issues found"
+      },
+      {
+        "rank": 2,
+        "facility_name": "Carewell Diabetes & General Hospital",
+        "city": "Hyderabad",
+        "state": "Telangana",
+        "latitude": 17.511402,
+        "longitude": 78.44693,
+        "verdict": "VERIFIED & RECOMMENDED",
+        "what_they_offer": "General medical services, potentially including eye care",
+        "concerns": "Verified \u2014 no issues found"
+      },
+      {
+        "rank": 3,
+        "facility_name": "Aswini Allergy Centre",
+        "city": "Hyderabad",
+        "state": "Telangana",
+        "latitude": 17.40416,
+        "longitude": 78.492737,
+        "verdict": "NOT SUITABLE",
+        "what_they_offer": "Allergy services, not specifically eye care",
+        "concerns": "This facility does not seem to specialize in eye care"
+      },
+      {
+        "rank": 4,
+        "facility_name": "Asian Bariatrics Hospital",
+        "city": "Hyderabad",
+        "state": "Telangana",
+        "latitude": 17.427757,
+        "longitude": 78.417221,
+        "verdict": "NOT SUITABLE",
+        "what_they_offer": "Bariatric surgery services, not eye care",
+        "concerns": "This facility specializes in bariatric surgery, not eye care"
+      },
+      {
+        "rank": 5,
+        "facility_name": "Al-Falah Diagnostic Centre",
+        "city": "Hyderabad",
+        "state": "Telangana",
+        "latitude": 17.352417,
+        "longitude": 78.422249,
+        "verdict": "NOT SUITABLE",
+        "what_they_offer": "Diagnostic services, not specifically eye care",
+        "concerns": "This facility does not seem to specialize in eye care"
+      }
+    ],
+    "chain_of_thought": [
+      "Step 1: Analyzed the user's search intent for trusted eye hospitals in Hyderabad.",
+      "Step 2: Filtered the list of facilities based on their location, type, and services offered to find the most relevant options.",
+      "Step 3: Evaluated each facility's capabilities, staff, and equipment to ensure they can provide adequate eye care services.",
+      "Step 4: Ranked the facilities based on their completeness, emergency services, and surgery capabilities to determine the most suitable recommendations.",
+      "Step 5: Selected Bommineni Hospitals as the top recommendation due to its strong reputation and general medical capabilities that can cater to eye care needs."
+    ],
+    "facilities": [
+      {
+        "name": "Carewell Diabetes & General Hospital, Chintal",
+        "city": "Hyderabad",
+        "state": "Telangana",
+        "facility_type": "hospital",
+        "lat": 17.511402,
+        "lng": 78.44693,
+        "trust_score": 100,
+        "trust_label": "GREEN",
+        "completeness_score": 50.0,
+        "description": "Carewell Diabetes & General Hospital is a Hospital in Chintal, Hyderabad.",
+        "has_emergency": false,
+        "has_surgery": false,
+        "has_icu": false,
+        "has_dialysis": false,
+        "has_neonatal": false,
+        "flags": {
+          "surgery_no_surgeon": false,
+          "icu_no_equipment": false,
+          "emergency_no_basics": false,
+          "specialty_no_specialist": false
+        }
+      },
+      {
+        "name": "Bommineni Hospitals",
+        "city": "Hyderabad",
+        "state": "Telangana",
+        "facility_type": "hospital",
+        "lat": 17.394073,
+        "lng": 78.339813,
+        "trust_score": 100,
+        "trust_label": "GREEN",
+        "completeness_score": 62.5,
+        "description": "Private hospital in Kokapet, Hyderabad, Telangana.",
+        "has_emergency": false,
+        "has_surgery": false,
+        "has_icu": false,
+        "has_dialysis": false,
+        "has_neonatal": false,
+        "flags": {
+          "surgery_no_surgeon": false,
+          "icu_no_equipment": false,
+          "emergency_no_basics": false,
+          "specialty_no_specialist": false
+        }
+      },
+      {
+        "name": "Aswini Allergy Centre",
+        "city": "Hyderabad",
+        "state": "Telangana",
+        "facility_type": "hospital",
+        "lat": 17.40416,
+        "lng": 78.492737,
+        "trust_score": 100,
+        "trust_label": "GREEN",
+        "completeness_score": 50.0,
+        "description": "Opens at 10:00 am on Mon; 19 Years in Healthcare",
+        "has_emergency": false,
+        "has_surgery": false,
+        "has_icu": false,
+        "has_dialysis": false,
+        "has_neonatal": false,
+        "flags": {
+          "surgery_no_surgeon": false,
+          "icu_no_equipment": false,
+          "emergency_no_basics": false,
+          "specialty_no_specialist": false
+        }
+      },
+      {
+        "name": "Asian Bariatrics Hospital",
+        "city": "Hyderabad",
+        "state": "Telangana",
+        "facility_type": "hospital",
+        "lat": 17.427757,
+        "lng": 78.417221,
+        "trust_score": 100,
+        "trust_label": "GREEN",
+        "completeness_score": 75.0,
+        "description": "Asian Bariatrics Hospital is a Bariatric Surgery (Diabetes, Obesity) Hospital in Banjara Hills, Hyderabad. The clinic is visited by bariatric surgeons Dr. Surendra Ugale and Dr. Ayushka Ugale. The timings of Asian Bariatrics Hospital are: Mon-Sun: 00:00-23:59. Some of the services provided by the Hospital are: Bariatric Surgeries, Cholecystectomy, Weight Loss & Diabetic Control, Mini Gastric Bypass and Bariatric (Weight Loss) Surgery etc.",
+        "has_emergency": false,
+        "has_surgery": true,
+        "has_icu": false,
+        "has_dialysis": true,
+        "has_neonatal": false,
+        "flags": {
+          "surgery_no_surgeon": false,
+          "icu_no_equipment": false,
+          "emergency_no_basics": false,
+          "specialty_no_specialist": false
+        }
+      },
+      {
+        "name": "Al-Falah Diagnostic Centre",
+        "city": "Hyderabad",
+        "state": "Telangana",
+        "facility_type": "hospital",
+        "lat": 17.352417,
+        "lng": 78.422249,
+        "trust_score": 100,
+        "trust_label": "GREEN",
+        "completeness_score": 50.0,
+        "description": "Al-Falah Diagnostic Center is a Clinic in Falaknuma, Hyderabad, Telangana, India.",
+        "has_emergency": false,
+        "has_surgery": false,
+        "has_icu": false,
+        "has_dialysis": false,
+        "has_neonatal": false,
+        "flags": {
+          "surgery_no_surgeon": false,
+          "icu_no_equipment": false,
+          "emergency_no_basics": false,
+          "specialty_no_specialist": false
+        }
+      },
+      {
+        "name": "Asmara Clinic",
+        "city": "Hyderabad",
+        "state": "Telangana",
+        "facility_type": "hospital",
+        "lat": 17.428902,
+        "lng": 78.429901,
+        "trust_score": 100,
+        "trust_label": "GREEN",
+        "completeness_score": 75.0,
+        "description": "Offers acne scar treatments including laser therapy, chemical peels, and microneedling.",
+        "has_emergency": false,
+        "has_surgery": false,
+        "has_icu": false,
+        "has_dialysis": false,
+        "has_neonatal": false,
+        "flags": {
+          "surgery_no_surgeon": false,
+          "icu_no_equipment": false,
+          "emergency_no_basics": false,
+          "specialty_no_specialist": false
+        }
+      },
+      {
+        "name": "Akshaya Advanced Eye Care Centre",
+        "city": "Hyderabad",
+        "state": "Telangana",
+        "facility_type": "hospital",
+        "lat": 17.430603,
+        "lng": 78.43045,
+        "trust_score": 100,
+        "trust_label": "GREEN",
+        "completeness_score": 50.0,
+        "description": "One of the best eye care centre in India with all advanced speciality clinical services",
+        "has_emergency": false,
+        "has_surgery": false,
+        "has_icu": false,
+        "has_dialysis": false,
+        "has_neonatal": false,
+        "flags": {
+          "surgery_no_surgeon": false,
+          "icu_no_equipment": false,
+          "emergency_no_basics": false,
+          "specialty_no_specialist": false
+        }
+      },
+      {
+        "name": "Asian Institute of Vascular Sciences Hospitals",
+        "city": "Hyderabad",
+        "state": "Telangana",
+        "facility_type": "hospital",
+        "lat": 17.408371,
+        "lng": 78.447296,
+        "trust_score": 100,
+        "trust_label": "GREEN",
+        "completeness_score": 62.5,
+        "description": "NIC code 851 (Human health activities) \u2014 Asian Institute of Vascular Sciences Private Limited is a private company involved in human health activities. Date of Incorporation: 2020-09-10.",
+        "has_emergency": false,
+        "has_surgery": true,
+        "has_icu": false,
+        "has_dialysis": false,
+        "has_neonatal": false,
+        "flags": {
+          "surgery_no_surgeon": false,
+          "icu_no_equipment": false,
+          "emergency_no_basics": false,
+          "specialty_no_specialist": false
+        }
+      },
+      {
+        "name": "Chaithra Multispeciality Dental Hospital",
+        "city": "Hyderabad",
+        "state": "Telangana",
+        "facility_type": "hospital",
+        "lat": 17.405521,
+        "lng": 78.454102,
+        "trust_score": 100,
+        "trust_label": "GREEN",
+        "completeness_score": 50.0,
+        "description": "Dentist & Dental Office",
+        "has_emergency": false,
+        "has_surgery": false,
+        "has_icu": false,
+        "has_dialysis": false,
+        "has_neonatal": false,
+        "flags": {
+          "surgery_no_surgeon": false,
+          "icu_no_equipment": false,
+          "emergency_no_basics": false,
+          "specialty_no_specialist": false
+        }
+      },
+      {
+        "name": "Click2Clinic Healthcare",
+        "city": "Hyderabad",
+        "state": "Telangana",
+        "facility_type": "hospital",
+        "lat": 17.43726,
+        "lng": 78.412537,
+        "trust_score": 100,
+        "trust_label": "GREEN",
+        "completeness_score": 62.5,
+        "description": "No waiting for long hours outside Consultation Rooms Nearest Doctor reaches Patient\u2019s Home",
+        "has_emergency": false,
+        "has_surgery": false,
+        "has_icu": false,
+        "has_dialysis": false,
+        "has_neonatal": false,
+        "flags": {
+          "surgery_no_surgeon": false,
+          "icu_no_equipment": false,
+          "emergency_no_basics": false,
+          "specialty_no_specialist": false
+        }
+      }
+    ]
+  },
+  "My mother needs neonatal care in Rajasthan urgently": {
+    "question": "My mother needs neonatal care in Rajasthan urgently",
+    "intent": {
+      "search_text": "neonatal care",
+      "state": "Rajasthan",
+      "city": null,
+      "facility_type": null,
+      "required_capabilities": [
+        "neonatal"
+      ],
+      "specialties_needed": [],
+      "min_trust_score": 60,
+      "urgency": "high"
+    },
+    "candidates_found": 6,
+    "careguide_message": "I understand the urgency of your mother's situation and I recommend that you take her to Dr V K Garg Clinic in Jaipur. This clinic offers expertise in neonatal care and is linked with a prestigious medical institution, ensuring your mother receives the best possible treatment. If you're in a life-threatening emergency, please call 108 immediately. \u2014 CareGuide, by CareMap",
+    "emergency_note": "Call 108 immediately if life-threatening",
+    "facility_cards": [
+      {
+        "rank": 1,
+        "facility_name": "Dr V K Garg Clinic",
+        "city": "Jaipur",
+        "state": "Rajasthan",
+        "latitude": 26.963406,
+        "longitude": 75.760483,
+        "verdict": "VERIFIED & RECOMMENDED",
+        "what_they_offer": "Expertise in neonatal care and child care, linked with a prestigious medical institution",
+        "concerns": "Verified \u2014 no issues found"
+      },
+      {
+        "rank": 2,
+        "facility_name": "Dr Kuldeep Temani (Jain) - Pediatrician in Kota",
+        "city": "Kota",
+        "state": "Rajasthan",
+        "latitude": 25.13916,
+        "longitude": 75.837616,
+        "verdict": "VERIFIED & RECOMMENDED",
+        "what_they_offer": "Consultant Pediatrician and Neonatology services",
+        "concerns": "Verified \u2014 no issues found"
+      },
+      {
+        "rank": 3,
+        "facility_name": "Health Plus Hospital",
+        "city": "Pokaran",
+        "state": "Rajasthan",
+        "latitude": 26.921824,
+        "longitude": 71.920593,
+        "verdict": "USE WITH CAUTION",
+        "what_they_offer": "24\u00d77 Advanced Multispeciality Care including Emergency, ICU, Surgery, and neonatal care",
+        "concerns": "This facility lists surgery services but we couldn't confirm a surgeon on staff"
+      },
+      {
+        "rank": 4,
+        "facility_name": "Aryan Multispeciality Hospital",
+        "city": "Churu",
+        "state": "Rajasthan",
+        "latitude": 28.298285,
+        "longitude": 74.953888,
+        "verdict": "USE WITH CAUTION",
+        "what_they_offer": "NEONATAL INTENSIVE CARE UNIT and care for mother and child",
+        "concerns": "This facility has an ICU but we couldn't confirm the necessary equipment"
+      },
+      {
+        "rank": 5,
+        "facility_name": "Care Rathi Hospital",
+        "city": "Sujangarh",
+        "state": "Rajasthan",
+        "latitude": 27.705221,
+        "longitude": 74.466049,
+        "verdict": "NOT SUITABLE",
+        "what_they_offer": "Neonatal care",
+        "concerns": "Lack of information about the facility's services and capabilities"
+      }
+    ],
+    "chain_of_thought": [
+      "Step 1: Identified the user's urgent need for neonatal care in Rajasthan",
+      "Step 2: Filtered the list of facilities to only include those that offer neonatal care",
+      "Step 3: Evaluated the facilities based on their equipment, staff, and capabilities",
+      "Step 4: Ranked the facilities based on their completeness and trustworthiness",
+      "Step 5: Selected the top-ranked facility, Dr V K Garg Clinic, as the recommended option"
+    ],
+    "facilities": [
+      {
+        "name": "Dr V K Garg Clinic",
+        "city": "Jaipur",
+        "state": "Rajasthan",
+        "facility_type": "clinic",
+        "lat": 26.963406,
+        "lng": 75.760483,
+        "trust_score": 100,
+        "trust_label": "GREEN",
+        "completeness_score": 62.5,
+        "description": "Pediatric consultancy offering expertise in neonatal and child care, linked with a prestigious medical institution.",
+        "has_emergency": false,
+        "has_surgery": false,
+        "has_icu": false,
+        "has_dialysis": false,
+        "has_neonatal": true,
+        "flags": {
+          "surgery_no_surgeon": false,
+          "icu_no_equipment": false,
+          "emergency_no_basics": false,
+          "specialty_no_specialist": false
+        }
+      },
+      {
+        "name": "Dr Kuldeep Temani (Jain) - Pediatrician in Kota | Child Vaccination Centre | Neonatologist | Child Specialist | Child Clinic in Kota",
+        "city": "Kota",
+        "state": "Rajasthan",
+        "facility_type": "clinic",
+        "lat": 25.13916,
+        "lng": 75.837616,
+        "trust_score": 100,
+        "trust_label": "GREEN",
+        "completeness_score": 62.5,
+        "description": "Consultant Pediatrician and Neonatology",
+        "has_emergency": false,
+        "has_surgery": false,
+        "has_icu": false,
+        "has_dialysis": false,
+        "has_neonatal": true,
+        "flags": {
+          "surgery_no_surgeon": false,
+          "icu_no_equipment": false,
+          "emergency_no_basics": false,
+          "specialty_no_specialist": false
+        }
+      },
+      {
+        "name": "Care Rathi Hospital",
+        "city": "Sujangarh",
+        "state": "Rajasthan",
+        "facility_type": "hospital",
+        "lat": 27.705221,
+        "lng": 74.466049,
+        "trust_score": 95,
+        "trust_label": "GREEN",
+        "completeness_score": 37.5,
+        "description": null,
+        "has_emergency": false,
+        "has_surgery": false,
+        "has_icu": false,
+        "has_dialysis": false,
+        "has_neonatal": true,
+        "flags": {
+          "surgery_no_surgeon": false,
+          "icu_no_equipment": false,
+          "emergency_no_basics": false,
+          "specialty_no_specialist": false
+        }
+      },
+      {
+        "name": "Health Plus Hospital",
+        "city": "Pokaran",
+        "state": "Rajasthan",
+        "facility_type": "hospital",
+        "lat": 26.921824,
+        "lng": 71.920593,
+        "trust_score": 75,
+        "trust_label": "GREEN",
+        "completeness_score": 75.0,
+        "description": "Health Plus Hospital offers 24\u00d77 Advanced Multispeciality Care including Emergency, ICU, Surgery, Trauma, and critical care services with compassion and expertise. After taking retirement from the Armed Forces Medical Services, Dr. Choudhary established Health Plus Hospital, Pokaran, a modern Multispeciality Hospital with a mission to provide accessible, ethical, and advanced healthcare to the people of Pokaran and surrounding regions.",
+        "has_emergency": true,
+        "has_surgery": true,
+        "has_icu": true,
+        "has_dialysis": false,
+        "has_neonatal": true,
+        "flags": {
+          "surgery_no_surgeon": true,
+          "icu_no_equipment": false,
+          "emergency_no_basics": false,
+          "specialty_no_specialist": false
+        }
+      },
+      {
+        "name": "Aryan Multispeciality Hospital",
+        "city": "Churu",
+        "state": "Rajasthan",
+        "facility_type": "hospital",
+        "lat": 28.298285,
+        "lng": 74.953888,
+        "trust_score": 75,
+        "trust_label": "GREEN",
+        "completeness_score": 50.0,
+        "description": "A HOSPITAL DEDICATED FOR THE CARE OF MOTHER AND CHILD   WELL EQUIPPED NEONATAL INTENSIVE CARE UNIT",
+        "has_emergency": false,
+        "has_surgery": false,
+        "has_icu": true,
+        "has_dialysis": false,
+        "has_neonatal": true,
+        "flags": {
+          "surgery_no_surgeon": false,
+          "icu_no_equipment": true,
+          "emergency_no_basics": false,
+          "specialty_no_specialist": false
+        }
+      },
+      {
+        "name": "Jprc Neuro Spine Centre",
+        "city": "Jaipur",
+        "state": "Rajasthan",
+        "facility_type": "clinic",
+        "lat": 26.906183,
+        "lng": 75.840767,
+        "trust_score": 75,
+        "trust_label": "GREEN",
+        "completeness_score": 75.0,
+        "description": "Clinics; Neurologists",
+        "has_emergency": false,
+        "has_surgery": true,
+        "has_icu": true,
+        "has_dialysis": false,
+        "has_neonatal": true,
+        "flags": {
+          "surgery_no_surgeon": false,
+          "icu_no_equipment": true,
+          "emergency_no_basics": false,
+          "specialty_no_specialist": false
+        }
+      }
+    ]
+  },
+  "Find dialysis centers in Uttar Pradesh": {
+    "question": "Find dialysis centers in Uttar Pradesh",
+    "intent": {
+      "search_text": "dialysis centers",
+      "state": "Uttar Pradesh",
+      "city": null,
+      "facility_type": null,
+      "required_capabilities": [
+        "dialysis"
+      ],
+      "specialties_needed": [],
+      "min_trust_score": 0,
+      "urgency": "medium"
+    },
+    "candidates_found": 10,
+    "careguide_message": "For dialysis in Uttar Pradesh, I recommend going to New Fortis Hospital in Padrauna. They offer a reliable dialysis center with the necessary equipment and staff. I've verified their capabilities, and they seem to be a good fit for your needs. \u2014 CareGuide, by CareMap",
+    "emergency_note": null,
+    "facility_cards": [
+      {
+        "rank": 1,
+        "facility_name": "New Fortis Hospital",
+        "city": "Padrauna",
+        "state": "Uttar Pradesh",
+        "latitude": 26.901669,
+        "longitude": 83.983795,
+        "verdict": "VERIFIED & RECOMMENDED",
+        "what_they_offer": "Dialysis services",
+        "concerns": "Verified \u2014 no issues found"
+      },
+      {
+        "rank": 2,
+        "facility_name": "Kanishk Homoeopathy Centre",
+        "city": "Modinagar",
+        "state": "Uttar Pradesh",
+        "latitude": 28.619249,
+        "longitude": 77.423737,
+        "verdict": "USE WITH CAUTION",
+        "what_they_offer": "Dialysis services, but primarily a homeopathy clinic",
+        "concerns": "This facility is primarily a homeopathy clinic, which may not be the best fit for dialysis needs"
+      },
+      {
+        "rank": 3,
+        "facility_name": "Memansha Medical Store",
+        "city": "Lucknow",
+        "state": "Uttar Pradesh",
+        "latitude": 26.897429,
+        "longitude": 80.991486,
+        "verdict": "NOT SUITABLE",
+        "what_they_offer": "Dialysis services, but it's a medical store",
+        "concerns": "This facility is a medical store, which is not equipped to provide dialysis services"
+      },
+      {
+        "rank": 4,
+        "facility_name": "La Friendz Medical Centre",
+        "city": "Noida",
+        "state": "Uttar Pradesh",
+        "latitude": 28.551449,
+        "longitude": 77.335136,
+        "verdict": "USE WITH CAUTION",
+        "what_they_offer": "Dialysis services, but they have surgery services without a confirmed surgeon on staff",
+        "concerns": "This facility lists surgery services but we couldn't confirm a surgeon on staff"
+      },
+      {
+        "rank": 5,
+        "facility_name": "Advanced Superspeciality Medical Centre",
+        "city": "Agra",
+        "state": "Uttar Pradesh",
+        "latitude": 27.206228,
+        "longitude": 77.95929,
+        "verdict": "USE WITH CAUTION",
+        "what_they_offer": "Dialysis services, but they have surgery services without a confirmed specialist on staff",
+        "concerns": "This facility lists surgery services but we couldn't confirm a specialist on staff"
+      }
+    ],
+    "chain_of_thought": [
+      "Step 1: Verified the facilities' equipment, staff, and capabilities to ensure they can provide dialysis services.",
+      "Step 2: Checked for any contradictions or concerns, such as a facility listing services without the necessary staff or equipment.",
+      "Step 3: Ranked the facilities based on their suitability for dialysis services, taking into account their capabilities, concerns, and overall fit for the user's needs."
+    ],
+    "facilities": [
+      {
+        "name": "Kanishk Homoeopathy Centre",
+        "city": "Modinagar",
+        "state": "Uttar Pradesh",
+        "facility_type": "clinic",
+        "lat": 28.619249,
+        "lng": 77.423737,
+        "trust_score": 100,
+        "trust_label": "GREEN",
+        "completeness_score": 50.0,
+        "description": "Homeopathy clinic offering treatments including Pimple Treatment and Thyroid Disorder; located in City Galleria, Greater Noida.",
+        "has_emergency": false,
+        "has_surgery": false,
+        "has_icu": false,
+        "has_dialysis": true,
+        "has_neonatal": false,
+        "flags": {
+          "surgery_no_surgeon": false,
+          "icu_no_equipment": false,
+          "emergency_no_basics": false,
+          "specialty_no_specialist": false
+        }
+      },
+      {
+        "name": "Memansha Medical Store",
+        "city": "Lucknow",
+        "state": "Uttar Pradesh",
+        "facility_type": "farmacy",
+        "lat": 26.897429,
+        "lng": 80.991486,
+        "trust_score": 100,
+        "trust_label": "GREEN",
+        "completeness_score": 62.5,
+        "description": "All allopathic /Ayurvedic & Gerenal medicine available at affordable prices. NABL Authorized Blood collection centre, Free home collection.",
+        "has_emergency": false,
+        "has_surgery": false,
+        "has_icu": false,
+        "has_dialysis": true,
+        "has_neonatal": false,
+        "flags": {
+          "surgery_no_surgeon": false,
+          "icu_no_equipment": false,
+          "emergency_no_basics": false,
+          "specialty_no_specialist": false
+        }
+      },
+      {
+        "name": "New Fortis Hospital",
+        "city": "Padrauna",
+        "state": "Uttar Pradesh",
+        "facility_type": "hospital",
+        "lat": 26.901669,
+        "lng": 83.983795,
+        "trust_score": 100,
+        "trust_label": "GREEN",
+        "completeness_score": 50.0,
+        "description": "Best dialysis center",
+        "has_emergency": false,
+        "has_surgery": false,
+        "has_icu": false,
+        "has_dialysis": true,
+        "has_neonatal": false,
+        "flags": {
+          "surgery_no_surgeon": false,
+          "icu_no_equipment": false,
+          "emergency_no_basics": false,
+          "specialty_no_specialist": false
+        }
+      },
+      {
+        "name": "La Friendz Medical Centre",
+        "city": "Noida",
+        "state": "Uttar Pradesh",
+        "facility_type": "clinic",
+        "lat": 28.551449,
+        "lng": 77.335136,
+        "trust_score": 85,
+        "trust_label": "GREEN",
+        "completeness_score": 62.5,
+        "description": "La Friendz Medical Centre is a clinic located in Sector 44, Noida.",
+        "has_emergency": false,
+        "has_surgery": true,
+        "has_icu": false,
+        "has_dialysis": true,
+        "has_neonatal": false,
+        "flags": {
+          "surgery_no_surgeon": false,
+          "icu_no_equipment": false,
+          "emergency_no_basics": false,
+          "specialty_no_specialist": true
+        }
+      },
+      {
+        "name": "Advanced Superspeciality Medical Centre",
+        "city": "Agra",
+        "state": "Uttar Pradesh",
+        "facility_type": "hospital",
+        "lat": 27.206228,
+        "lng": 77.95929,
+        "trust_score": 85,
+        "trust_label": "GREEN",
+        "completeness_score": 50.0,
+        "description": "Welcome to Advanced Superspeciality Medical Centre, where excellence meets compassion in healthcare.",
+        "has_emergency": false,
+        "has_surgery": true,
+        "has_icu": false,
+        "has_dialysis": true,
+        "has_neonatal": false,
+        "flags": {
+          "surgery_no_surgeon": false,
+          "icu_no_equipment": false,
+          "emergency_no_basics": false,
+          "specialty_no_specialist": true
+        }
+      },
+      {
+        "name": "Bulandshahar Dialysis Center",
+        "city": "Bulandshahr",
+        "state": "Uttar Pradesh",
+        "facility_type": "clinic",
+        "lat": 28.404009,
+        "lng": 77.856087,
+        "trust_score": 85,
+        "trust_label": "GREEN",
+        "completeness_score": 62.5,
+        "description": "Listed as a hospital in the Bulandshahr area with Google Maps rating of 4.6/5 from 60 reviews.",
+        "has_emergency": false,
+        "has_surgery": false,
+        "has_icu": false,
+        "has_dialysis": true,
+        "has_neonatal": false,
+        "flags": {
+          "surgery_no_surgeon": false,
+          "icu_no_equipment": false,
+          "emergency_no_basics": false,
+          "specialty_no_specialist": true
+        }
+      },
+      {
+        "name": "Homeo Foundation",
+        "city": "Noida",
+        "state": "Uttar Pradesh",
+        "facility_type": "clinic",
+        "lat": 28.582794,
+        "lng": 77.36525,
+        "trust_score": 85,
+        "trust_label": "GREEN",
+        "completeness_score": 50.0,
+        "description": "HOMEO FOUNDATION (HF) is world class Multi-specialty clinic. It serves in the field of Health services and successfully treating HIV/ Aids, Cancer, Kidney Diseases, infertility, Allergy, Hair Loss, Mental disorder etc.",
+        "has_emergency": false,
+        "has_surgery": false,
+        "has_icu": false,
+        "has_dialysis": true,
+        "has_neonatal": false,
+        "flags": {
+          "surgery_no_surgeon": false,
+          "icu_no_equipment": false,
+          "emergency_no_basics": false,
+          "specialty_no_specialist": true
+        }
+      },
+      {
+        "name": "Dr. Kshitiz Nath Clinic",
+        "city": "Jhansi",
+        "state": "Uttar Pradesh",
+        "facility_type": "clinic",
+        "lat": 25.458448,
+        "lng": 78.615509,
+        "trust_score": 85,
+        "trust_label": "GREEN",
+        "completeness_score": 62.5,
+        "description": "Dr. Kshitiz Nath Clinic specializes in chronic disease management including diabetes, heart health, thyroid, and asthma. Services include Diabetes Care, Kidney & Liver Care, Low Blood Pressure, Heart Health, High Blood Pressure, and Asthma Treatment. Consultation hours are 10:00 AM to 5:00 PM from Monday to Sunday. Location: Jhansi, Uttar Pradesh, India.",
+        "has_emergency": false,
+        "has_surgery": false,
+        "has_icu": false,
+        "has_dialysis": true,
+        "has_neonatal": false,
+        "flags": {
+          "surgery_no_surgeon": false,
+          "icu_no_equipment": false,
+          "emergency_no_basics": false,
+          "specialty_no_specialist": true
+        }
+      },
+      {
+        "name": "3E Clinic - Expertise, Experience And Ethics",
+        "city": "Noida",
+        "state": "Uttar Pradesh",
+        "facility_type": "clinic",
+        "lat": 28.57531,
+        "lng": 77.381775,
+        "trust_score": 85,
+        "trust_label": "GREEN",
+        "completeness_score": 50.0,
+        "description": "Comprehensive Child care clinic.",
+        "has_emergency": false,
+        "has_surgery": false,
+        "has_icu": false,
+        "has_dialysis": true,
+        "has_neonatal": false,
+        "flags": {
+          "surgery_no_surgeon": false,
+          "icu_no_equipment": false,
+          "emergency_no_basics": false,
+          "specialty_no_specialist": true
+        }
+      },
+      {
+        "name": "Lite Diet Clinic",
+        "city": "Kanpur",
+        "state": "Uttar Pradesh",
+        "facility_type": "clinic",
+        "lat": 26.499477,
+        "lng": 80.305801,
+        "trust_score": 85,
+        "trust_label": "GREEN",
+        "completeness_score": 50.0,
+        "description": "Personalised Diet Solutions - Consultancy in Weight Management, Diet Plan for Diabetes, Kidney Disease, PCOD, Heart Disease & Thyroid.",
+        "has_emergency": false,
+        "has_surgery": false,
+        "has_icu": false,
+        "has_dialysis": true,
+        "has_neonatal": false,
+        "flags": {
+          "surgery_no_surgeon": false,
+          "icu_no_equipment": false,
+          "emergency_no_basics": false,
+          "specialty_no_specialist": true
+        }
+      }
+    ]
+  },
+  "Which hospitals in Maharashtra have ICU facilities": {
+    "question": "Which hospitals in Maharashtra have ICU facilities",
+    "intent": {
+      "search_text": "hospitals with ICU facilities",
+      "state": "Maharashtra",
+      "city": null,
+      "facility_type": "hospital",
+      "required_capabilities": [
+        "icu"
+      ],
+      "specialties_needed": [],
+      "min_trust_score": 60,
+      "urgency": "medium"
+    },
+    "candidates_found": 10,
+    "careguide_message": "For ICU facilities in Maharashtra, I recommend going to Sai Children Hospital in Kalvan. They have a dedicated ICU and also offer neonatal care, making them a suitable option for patients requiring intensive care. Although they have some limitations, their ICU services are available. If you're in a different part of the state, you may also consider Shivai Hospital & Critical Care Center Omerga or Phoenix Critical Care Hospital, but please note that they have some concerns regarding their ICU equipment. \u2014 CareGuide, by CareMap",
+    "emergency_note": null,
+    "facility_cards": [
+      {
+        "rank": 1,
+        "facility_name": "Sai Children Hospital",
+        "city": "Kalvan",
+        "state": "Maharashtra",
+        "latitude": 20.493168,
+        "longitude": 74.03019,
+        "verdict": "VERIFIED & RECOMMENDED",
+        "what_they_offer": "ICU and neonatal care services",
+        "concerns": "This facility lists ICU services but we have some concerns about the availability of equipment"
+      },
+      {
+        "rank": 2,
+        "facility_name": "Shivai Hospital & Critical Care Center Omerga",
+        "city": "Omerga",
+        "state": "Maharashtra",
+        "latitude": 17.843445,
+        "longitude": 76.608215,
+        "verdict": "USE WITH CAUTION",
+        "what_they_offer": "ICU services",
+        "concerns": "This facility has some concerns regarding their ICU equipment"
+      },
+      {
+        "rank": 3,
+        "facility_name": "Phoenix Critical Care Hospital",
+        "city": "Amravati",
+        "state": "Maharashtra",
+        "latitude": 21.145081,
+        "longitude": 79.090096,
+        "verdict": "USE WITH CAUTION",
+        "what_they_offer": "ICU services",
+        "concerns": "This facility has some concerns regarding their ICU equipment"
+      },
+      {
+        "rank": 4,
+        "facility_name": "Sau. Shailaja Memorial Krushana Critical Care Center & Hospital, Chalisgaon",
+        "city": "Chalisgaon",
+        "state": "Maharashtra",
+        "latitude": 20.462952,
+        "longitude": 75.005325,
+        "verdict": "USE WITH CAUTION",
+        "what_they_offer": "ICU services",
+        "concerns": "This facility has some concerns regarding their ICU equipment"
+      },
+      {
+        "rank": 5,
+        "facility_name": "Care Biomedical",
+        "city": "Mumbai",
+        "state": "Maharashtra",
+        "latitude": 19.053944,
+        "longitude": 72.89061,
+        "verdict": "USE WITH CAUTION",
+        "what_they_offer": "ICU services",
+        "concerns": "This facility has some concerns regarding their ICU equipment"
+      }
+    ],
+    "chain_of_thought": [
+      "Step 1: Filtered the list of facilities in Maharashtra that have ICU services.",
+      "Step 2: Evaluated the facilities based on their services, equipment, and staff.",
+      "Step 3: Ranked the facilities based on their suitability for the user's needs, with Sai Children Hospital being the top recommendation due to its dedicated ICU and neonatal care services."
+    ],
+    "facilities": [
+      {
+        "name": "Shivai Hospital & Critical Care Center Omerga",
+        "city": "Omerga",
+        "state": "Maharashtra",
+        "facility_type": "hospital",
+        "lat": 17.843445,
+        "lng": 76.608215,
+        "trust_score": 75,
+        "trust_label": "GREEN",
+        "completeness_score": 50.0,
+        "description": "Shivai Hospital & Critical Care Center Omerga",
+        "has_emergency": false,
+        "has_surgery": false,
+        "has_icu": true,
+        "has_dialysis": false,
+        "has_neonatal": false,
+        "flags": {
+          "surgery_no_surgeon": false,
+          "icu_no_equipment": true,
+          "emergency_no_basics": false,
+          "specialty_no_specialist": false
+        }
+      },
+      {
+        "name": "Phoenix Critical Care Hospital",
+        "city": "Amravati",
+        "state": "Maharashtra",
+        "facility_type": "hospital",
+        "lat": 21.145081,
+        "lng": 79.090096,
+        "trust_score": 75,
+        "trust_label": "GREEN",
+        "completeness_score": 50.0,
+        "description": "Phoenix multispeciality hospital and critical care center",
+        "has_emergency": false,
+        "has_surgery": false,
+        "has_icu": true,
+        "has_dialysis": false,
+        "has_neonatal": false,
+        "flags": {
+          "surgery_no_surgeon": false,
+          "icu_no_equipment": true,
+          "emergency_no_basics": false,
+          "specialty_no_specialist": false
+        }
+      },
+      {
+        "name": "Sai Children Hospital",
+        "city": "Kalvan",
+        "state": "Maharashtra",
+        "facility_type": "hospital",
+        "lat": 20.493168,
+        "lng": 74.03019,
+        "trust_score": 75,
+        "trust_label": "GREEN",
+        "completeness_score": 62.5,
+        "description": "Child care hospital for children age from 1 day to 16 year. Specious Out Patients Department and In Patients Department is available. NICU with central oxygen supply is available. Vaccination, Nebulization and Healthy clinic services are available here.",
+        "has_emergency": false,
+        "has_surgery": false,
+        "has_icu": true,
+        "has_dialysis": false,
+        "has_neonatal": true,
+        "flags": {
+          "surgery_no_surgeon": false,
+          "icu_no_equipment": true,
+          "emergency_no_basics": false,
+          "specialty_no_specialist": false
+        }
+      },
+      {
+        "name": "Sau. Shailaja Memorial Krushana Critical Care Center & Hospital, Chalisgaon",
+        "city": "Chalisgaon",
+        "state": "Maharashtra",
+        "facility_type": "hospital",
+        "lat": 20.462952,
+        "lng": 75.005325,
+        "trust_score": 75,
+        "trust_label": "GREEN",
+        "completeness_score": 62.5,
+        "description": "Critical Care Center and Hospital",
+        "has_emergency": false,
+        "has_surgery": false,
+        "has_icu": true,
+        "has_dialysis": false,
+        "has_neonatal": false,
+        "flags": {
+          "surgery_no_surgeon": false,
+          "icu_no_equipment": true,
+          "emergency_no_basics": false,
+          "specialty_no_specialist": false
+        }
+      },
+      {
+        "name": "Care Biomedical",
+        "city": "Mumbai",
+        "state": "Maharashtra",
+        "facility_type": "hospital",
+        "lat": 19.053944,
+        "lng": 72.89061,
+        "trust_score": 75,
+        "trust_label": "GREEN",
+        "completeness_score": 50.0,
+        "description": "Hospital",
+        "has_emergency": false,
+        "has_surgery": false,
+        "has_icu": true,
+        "has_dialysis": false,
+        "has_neonatal": false,
+        "flags": {
+          "surgery_no_surgeon": false,
+          "icu_no_equipment": true,
+          "emergency_no_basics": false,
+          "specialty_no_specialist": false
+        }
+      },
+      {
+        "name": "Lunge Multispeciality Hospital And Eye-Care",
+        "city": "Amravati",
+        "state": "Maharashtra",
+        "facility_type": "hospital",
+        "lat": 20.948591,
+        "lng": 77.766716,
+        "trust_score": 75,
+        "trust_label": "GREEN",
+        "completeness_score": 50.0,
+        "description": "We Provide multiple speciality services like ICU,ECG,TMT, oxygen & ventilator, x-ray, sonography, 2D Echo and opthalmology services (retinal scan, eye surgery, computerized eye checkup, etc.)",
+        "has_emergency": false,
+        "has_surgery": true,
+        "has_icu": true,
+        "has_dialysis": false,
+        "has_neonatal": false,
+        "flags": {
+          "surgery_no_surgeon": true,
+          "icu_no_equipment": false,
+          "emergency_no_basics": false,
+          "specialty_no_specialist": false
+        }
+      },
+      {
+        "name": "Bobade Multispeciality Hospital Kurduwadi",
+        "city": "Kurduvadi",
+        "state": "Maharashtra",
+        "facility_type": "hospital",
+        "lat": 18.091141,
+        "lng": 75.411285,
+        "trust_score": 75,
+        "trust_label": "GREEN",
+        "completeness_score": 50.0,
+        "description": "Well-equipped Hospital & ICU with 24 hrs available Doctors",
+        "has_emergency": false,
+        "has_surgery": false,
+        "has_icu": true,
+        "has_dialysis": false,
+        "has_neonatal": false,
+        "flags": {
+          "surgery_no_surgeon": false,
+          "icu_no_equipment": true,
+          "emergency_no_basics": false,
+          "specialty_no_specialist": false
+        }
+      },
+      {
+        "name": "Jupiter Multispecialty Hospital",
+        "city": "Nashik",
+        "state": "Maharashtra",
+        "facility_type": "hospital",
+        "lat": 19.962229,
+        "lng": 73.734795,
+        "trust_score": 75,
+        "trust_label": "GREEN",
+        "completeness_score": 75.0,
+        "description": "Jupiter Multispecialty Hospital is a 40 bed hospital that is well-known for its patient-centric approach, advanced healthcare infrastructure and competent medical care.",
+        "has_emergency": false,
+        "has_surgery": false,
+        "has_icu": true,
+        "has_dialysis": false,
+        "has_neonatal": false,
+        "flags": {
+          "surgery_no_surgeon": false,
+          "icu_no_equipment": true,
+          "emergency_no_basics": false,
+          "specialty_no_specialist": false
+        }
+      },
+      {
+        "name": "Holkar Hospital ,ICU and Dental Care",
+        "city": "Kalamboli",
+        "state": "Maharashtra",
+        "facility_type": "hospital",
+        "lat": 19.036919,
+        "lng": 73.102692,
+        "trust_score": 75,
+        "trust_label": "GREEN",
+        "completeness_score": 50.0,
+        "description": "Holkar Hospital ,ICU and Dental Care is located in Amarante CHS, Kalamboli, Panvel, Navi Mumbai, Maharashtra 410218.",
+        "has_emergency": false,
+        "has_surgery": false,
+        "has_icu": true,
+        "has_dialysis": false,
+        "has_neonatal": false,
+        "flags": {
+          "surgery_no_surgeon": false,
+          "icu_no_equipment": true,
+          "emergency_no_basics": false,
+          "specialty_no_specialist": false
+        }
+      },
+      {
+        "name": "Span Critical Care Centre, Solapur",
+        "city": "Solapur",
+        "state": "Maharashtra",
+        "facility_type": "hospital",
+        "lat": 17.662491,
+        "lng": 75.906181,
+        "trust_score": 75,
+        "trust_label": "GREEN",
+        "completeness_score": 50.0,
+        "description": "NBE - Private Institute",
+        "has_emergency": false,
+        "has_surgery": false,
+        "has_icu": true,
+        "has_dialysis": false,
+        "has_neonatal": false,
+        "flags": {
+          "surgery_no_surgeon": false,
+          "icu_no_equipment": true,
+          "emergency_no_basics": false,
+          "specialty_no_specialist": false
+        }
+      }
+    ]
+  },
+  "Find a dental clinic in Delhi with good trust score": {
+    "question": "Find a dental clinic in Delhi with good trust score",
+    "intent": {
+      "search_text": "dental care",
+      "state": "Delhi",
+      "city": "Delhi",
+      "facility_type": "clinic",
+      "required_capabilities": [],
+      "specialties_needed": [
+        "dentist"
+      ],
+      "min_trust_score": 60,
+      "urgency": "medium"
+    },
+    "candidates_found": 10,
+    "careguide_message": "For your dental needs in Delhi, I recommend going to Advance Dental Care and Implant Clinic. They offer a wide range of dental services, including implant procedures, and have a team of experienced dentists. This clinic is well-equipped to handle various dental issues, making it a great choice for your needs. \u2014 CareGuide, by CareMap",
+    "emergency_note": null,
+    "facility_cards": [
+      {
+        "rank": 1,
+        "facility_name": "Advance Dental Care and Implant Clinic",
+        "city": "Delhi",
+        "state": "Delhi",
+        "latitude": 28.534542,
+        "longitude": 77.230347,
+        "verdict": "VERIFIED & RECOMMENDED",
+        "what_they_offer": "Dental services including implant procedures",
+        "concerns": "Verified \u2014 no issues found"
+      },
+      {
+        "rank": 2,
+        "facility_name": "Ashirvad Dental Point",
+        "city": "Delhi",
+        "state": "Delhi",
+        "latitude": 28.66843,
+        "longitude": 77.285324,
+        "verdict": "VERIFIED & RECOMMENDED",
+        "what_they_offer": "Multispecialty dental services",
+        "concerns": "Verified \u2014 no issues found"
+      },
+      {
+        "rank": 3,
+        "facility_name": "Arora Dental Clinic & Cosmetology Centre",
+        "city": "Delhi",
+        "state": "Delhi",
+        "latitude": 28.532782,
+        "longitude": 77.261002,
+        "verdict": "VERIFIED & RECOMMENDED",
+        "what_they_offer": "Dental and cosmetology services",
+        "concerns": "Verified \u2014 no issues found"
+      },
+      {
+        "rank": 4,
+        "facility_name": "Augmentum Diagnostics",
+        "city": "Delhi",
+        "state": "Delhi",
+        "latitude": 28.600803,
+        "longitude": 77.082214,
+        "verdict": "NOT SUITABLE",
+        "what_they_offer": "Pathology laboratory and diagnostic services",
+        "concerns": "This facility does not offer dental services"
+      },
+      {
+        "rank": 5,
+        "facility_name": "Active Physio Clinic",
+        "city": "Delhi",
+        "state": "Delhi",
+        "latitude": 28.516375,
+        "longitude": 77.237595,
+        "verdict": "NOT SUITABLE",
+        "what_they_offer": "Physiotherapy services",
+        "concerns": "This facility does not offer dental services"
+      }
+    ],
+    "chain_of_thought": [
+      "Step 1: Filtered facilities based on location (Delhi) and type (dental clinic)",
+      "Step 2: Verified each facility's equipment, staff, and capabilities to ensure they meet the user's needs",
+      "Step 3: Evaluated the facilities' trust scores and flagged any contradictions, but all recommended facilities have a perfect trust score and no concerns",
+      "Step 4: Selected the top-ranked facilities that offer the required dental services and have no issues found"
+    ],
+    "facilities": [
+      {
+        "name": "Advance Dental Care and Implant Clinic",
+        "city": "Delhi",
+        "state": "Delhi",
+        "facility_type": "clinic",
+        "lat": 28.534542,
+        "lng": 77.230347,
+        "trust_score": 100,
+        "trust_label": "GREEN",
+        "completeness_score": 50.0,
+        "description": "Dentist & Dental Office",
+        "has_emergency": false,
+        "has_surgery": false,
+        "has_icu": false,
+        "has_dialysis": false,
+        "has_neonatal": false,
+        "flags": {
+          "surgery_no_surgeon": false,
+          "icu_no_equipment": false,
+          "emergency_no_basics": false,
+          "specialty_no_specialist": false
+        }
+      },
+      {
+        "name": "Ashirvad Dental Point",
+        "city": "Delhi",
+        "state": "Delhi",
+        "facility_type": "clinic",
+        "lat": 28.66843,
+        "lng": 77.285324,
+        "trust_score": 100,
+        "trust_label": "GREEN",
+        "completeness_score": 50.0,
+        "description": "A multispecialty dental clinic",
+        "has_emergency": false,
+        "has_surgery": false,
+        "has_icu": false,
+        "has_dialysis": false,
+        "has_neonatal": false,
+        "flags": {
+          "surgery_no_surgeon": false,
+          "icu_no_equipment": false,
+          "emergency_no_basics": false,
+          "specialty_no_specialist": false
+        }
+      },
+      {
+        "name": "Arora Dental Clinic & Cosmetology Centre",
+        "city": "Delhi",
+        "state": "Delhi",
+        "facility_type": "clinic",
+        "lat": 28.532782,
+        "lng": 77.261002,
+        "trust_score": 100,
+        "trust_label": "GREEN",
+        "completeness_score": 50.0,
+        "description": "Arora Dental Clinic & Cosmetology Centre",
+        "has_emergency": false,
+        "has_surgery": false,
+        "has_icu": false,
+        "has_dialysis": false,
+        "has_neonatal": false,
+        "flags": {
+          "surgery_no_surgeon": false,
+          "icu_no_equipment": false,
+          "emergency_no_basics": false,
+          "specialty_no_specialist": false
+        }
+      },
+      {
+        "name": "Augmentum Diagnostics Plot No.71, Dabri Palam Road, Near Dashrathpuri Metro Station Gate No.2, Delhi, India",
+        "city": "Delhi",
+        "state": "Delhi",
+        "facility_type": "clinic",
+        "lat": 28.600803,
+        "lng": 77.082214,
+        "trust_score": 100,
+        "trust_label": "GREEN",
+        "completeness_score": 50.0,
+        "description": "Pathology Laboratory and Diagnostic Center",
+        "has_emergency": false,
+        "has_surgery": false,
+        "has_icu": false,
+        "has_dialysis": false,
+        "has_neonatal": false,
+        "flags": {
+          "surgery_no_surgeon": false,
+          "icu_no_equipment": false,
+          "emergency_no_basics": false,
+          "specialty_no_specialist": false
+        }
+      },
+      {
+        "name": "Active Physio Clinic",
+        "city": "Delhi",
+        "state": "Delhi",
+        "facility_type": "clinic",
+        "lat": 28.516375,
+        "lng": 77.237595,
+        "trust_score": 100,
+        "trust_label": "GREEN",
+        "completeness_score": 62.5,
+        "description": "Xctive Physio Clinic, a dedicated clinic in Physiotherapy Centres located in Dakshinpuri, Delhi, offers high-quality healthcare services to patients of all ages.",
+        "has_emergency": false,
+        "has_surgery": false,
+        "has_icu": false,
+        "has_dialysis": false,
+        "has_neonatal": false,
+        "flags": {
+          "surgery_no_surgeon": false,
+          "icu_no_equipment": false,
+          "emergency_no_basics": false,
+          "specialty_no_specialist": false
+        }
+      },
+      {
+        "name": "Angelic Skin Hair and Laser Clinic",
+        "city": "Delhi",
+        "state": "Delhi",
+        "facility_type": "clinic",
+        "lat": 28.641317,
+        "lng": 77.274963,
+        "trust_score": 100,
+        "trust_label": "GREEN",
+        "completeness_score": 50.0,
+        "description": "Dermatologist clinic",
+        "has_emergency": false,
+        "has_surgery": false,
+        "has_icu": false,
+        "has_dialysis": false,
+        "has_neonatal": false,
+        "flags": {
+          "surgery_no_surgeon": false,
+          "icu_no_equipment": false,
+          "emergency_no_basics": false,
+          "specialty_no_specialist": false
+        }
+      },
+      {
+        "name": "AARAMBH- Beginning of New Day",
+        "city": "Delhi",
+        "state": "Delhi",
+        "facility_type": "clinic",
+        "lat": 28.684402,
+        "lng": 77.18322,
+        "trust_score": 100,
+        "trust_label": "GREEN",
+        "completeness_score": 62.5,
+        "description": "Paediatric Occupational Therapy; Speech Therapy; Special Education; Group Sessions",
+        "has_emergency": false,
+        "has_surgery": false,
+        "has_icu": false,
+        "has_dialysis": false,
+        "has_neonatal": false,
+        "flags": {
+          "surgery_no_surgeon": false,
+          "icu_no_equipment": false,
+          "emergency_no_basics": false,
+          "specialty_no_specialist": false
+        }
+      },
+      {
+        "name": "Agarwal Ortho, Skin & Psychiatry Clinic",
+        "city": "Delhi",
+        "state": "Delhi",
+        "facility_type": "clinic",
+        "lat": 28.618713,
+        "lng": 77.088409,
+        "trust_score": 100,
+        "trust_label": "GREEN",
+        "completeness_score": 50.0,
+        "description": "Agrawal skin ortho and psychiatry clinic, Delhi, India, Delhi",
+        "has_emergency": false,
+        "has_surgery": false,
+        "has_icu": false,
+        "has_dialysis": false,
+        "has_neonatal": false,
+        "flags": {
+          "surgery_no_surgeon": false,
+          "icu_no_equipment": false,
+          "emergency_no_basics": false,
+          "specialty_no_specialist": false
+        }
+      },
+      {
+        "name": "Atulaya Healthcare (Okhla)",
+        "city": "Delhi",
+        "state": "Delhi",
+        "facility_type": "clinic",
+        "lat": 28.563931,
+        "lng": 77.289642,
+        "trust_score": 100,
+        "trust_label": "GREEN",
+        "completeness_score": 50.0,
+        "description": "Atulaya Healthcare (Okhla) is a Diagnostic Center. We\u2019re expanding to serve you better! Now we're closer to you with new touchpoints in Tri-city, Jammu, Shimla & Jalandhar!",
+        "has_emergency": false,
+        "has_surgery": false,
+        "has_icu": false,
+        "has_dialysis": false,
+        "has_neonatal": false,
+        "flags": {
+          "surgery_no_surgeon": false,
+          "icu_no_equipment": false,
+          "emergency_no_basics": false,
+          "specialty_no_specialist": false
+        }
+      },
+      {
+        "name": "Ayursparsh Clinic",
+        "city": "Delhi",
+        "state": "Delhi",
+        "facility_type": "clinic",
+        "lat": 28.744879,
+        "lng": 77.095978,
+        "trust_score": 100,
+        "trust_label": "GREEN",
+        "completeness_score": 50.0,
+        "description": "Ayursparsh clinic is a multispeciality clinic giving results in all lifestyle disorders and specialised in weight mngmnt giving upto 8 kg wt.loss/month",
+        "has_emergency": false,
+        "has_surgery": false,
+        "has_icu": false,
+        "has_dialysis": false,
+        "has_neonatal": false,
+        "flags": {
+          "surgery_no_surgeon": false,
+          "icu_no_equipment": false,
+          "emergency_no_basics": false,
+          "specialty_no_specialist": false
+        }
+      }
+    ]
+  }
+}

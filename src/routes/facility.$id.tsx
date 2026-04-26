@@ -7,7 +7,7 @@ import { ArrowLeft, ChevronDown, MapPin, Bed, Stethoscope, Wrench, AlertTriangle
 export const Route = createFileRoute("/facility/$id")({
   head: ({ params }) => ({
     meta: [
-      { title: `Facility ${params.id} — MedDesert AI` },
+      { title: `Facility ${params.id} — CareMap` },
       { name: "description", content: "Detailed trust analysis, extracted equipment, and contradictions for this healthcare facility." },
     ],
   }),

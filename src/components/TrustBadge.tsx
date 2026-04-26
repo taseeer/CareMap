@@ -3,18 +3,27 @@ import type { TrustLabel } from "@/lib/types";
 import { CheckCircle2, AlertTriangle, ShieldAlert } from "lucide-react";
 
 export function TrustBadge({ label, score, className }: { label: TrustLabel; score: number; className?: string }) {
-  const styles: Record<TrustLabel, { bg: string; text: string; Icon: React.ComponentType<{ className?: string }> }> = {
-    Verified: { bg: "bg-success/15 text-success border-success/30", text: "text-success", Icon: CheckCircle2 },
-    "Needs Review": { bg: "bg-warning/15 text-warning border-warning/30", text: "text-warning", Icon: AlertTriangle },
-    Suspicious: { bg: "bg-danger/15 text-danger border-danger/40", text: "text-danger", Icon: ShieldAlert },
+  const styles: Record<TrustLabel, { cls: string; Icon: React.ComponentType<{ className?: string }> }> = {
+    Verified: {
+      cls: "bg-[#d1fae5] text-[#065f46] border-[#a7f3d0]",
+      Icon: CheckCircle2,
+    },
+    "Needs Review": {
+      cls: "bg-[#fef3c7] text-[#92400e] border-[#fde68a]",
+      Icon: AlertTriangle,
+    },
+    Suspicious: {
+      cls: "bg-[#fee2e2] text-[#991b1b] border-[#fecaca]",
+      Icon: ShieldAlert,
+    },
   };
   const s = styles[label];
   const Icon = s.Icon;
   return (
     <span
       className={cn(
-        "inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium border",
-        s.bg,
+        "inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold border shadow-[0_1px_0_rgba(2,6,23,0.04)]",
+        s.cls,
         className,
       )}
     >

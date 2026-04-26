@@ -1,0 +1,52 @@
+{
+  "Find the nearest facility in rural Bihar that can perform an emergency appendectomy": {
+    "question": "Find the nearest facility in rural Bihar that can perform an emergency appendectomy",
+    "candidates_found": 4,
+    "careguide_message": "Given the urgent need for an emergency appendectomy, I strongly recommend going to Jalal Medical Center in Motihari, Bihar. — CareGuide, by CareMap",
+    "emergency_note": "Call 108 immediately if life-threatening",
+    "facility_cards": [
+      {
+        "rank": 1,
+        "facility_name": "Jalal Medical Center",
+        "city": "Motihari",
+        "state": "Bihar",
+        "latitude": 26.648085,
+        "longitude": 84.93428,
+        "verdict": "VERIFIED & RECOMMENDED",
+        "what_they_offer": "24x7 emergency services, including surgery",
+        "concerns": "This facility lists surgery services but we couldn't confirm a surgeon on staff"
+      },
+      {
+        "rank": 2,
+        "facility_name": "Shree Pradhan Hospital",
+        "city": "Muzaffarpur",
+        "state": "Bihar",
+        "latitude": 26.105175,
+        "longitude": 85.370598,
+        "verdict": "USE WITH CAUTION",
+        "what_they_offer": "Emergency Service 24x7, General Surgery",
+        "concerns": "Limited information available about their emergency services"
+      }
+    ]
+  },
+  "Show me trusted eye hospitals in Hyderabad": {
+    "question": "Show me trusted eye hospitals in Hyderabad",
+    "candidates_found": 10,
+    "careguide_message": "For your eye care needs in Hyderabad, I recommend going to Bommineni Hospitals in Kokapet. — CareGuide, by CareMap",
+    "emergency_note": null,
+    "facility_cards": [
+      {
+        "rank": 1,
+        "facility_name": "Bommineni Hospitals",
+        "city": "Hyderabad",
+        "state": "Telangana",
+        "latitude": 17.394073,
+        "longitude": 78.339813,
+        "verdict": "VERIFIED & RECOMMENDED",
+        "what_they_offer": "General medical services that can cater to eye care needs",
+        "concerns": "Verified — no issues found"
+      }
+    ]
+  }
+}
+

@@ -24,9 +24,9 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "MedDesert AI — Healthcare Intelligence for India" },
+      { title: "CareMap - Healthcare Intelligence for India" },
       { name: "description", content: "AI-powered analysis of Indian hospital records to identify medical deserts and verify facility claims." },
-      { property: "og:title", content: "MedDesert AI — Healthcare Intelligence" },
+      { property: "og:title", content: "CareMap - Healthcare Intelligence for India" },
       { property: "og:description", content: "Identify medical deserts and verify facility claims across 10,000+ Indian hospitals." },
       { property: "og:type", content: "website" },
     ],
@@ -39,7 +39,7 @@ export const Route = createRootRoute({
 
 function RootShell({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en">
       <head>
         <HeadContent />
       </head>

@@ -7,23 +7,19 @@ interface Props {
 export function IndiaMap({ facilities }: Props) {
   return (
     <div className="relative w-full">
-      {/* Your heatmap embedded here */}
       <div
-        className="w-full rounded-2xl border border-border overflow-hidden"
+        className="relative w-full rounded-2xl border border-border overflow-hidden bg-white"
         style={{ height: "700px" }}
       >
         <iframe
           src="/india_heatmap_real.html"
-          width="100%"
-          height="100%"
-          style={{ border: "none" }}
-          title="India Healthcare Heatmap"
+          className="w-full h-full border-0"
+          title="India Healthcare Map"
         />
       </div>
 
-      {/* Legend matches Taseer's dark theme */}
-      <div className="absolute top-4 left-4 bg-card/90 backdrop-blur-sm border border-border rounded-lg p-3 text-xs space-y-1.5">
-        <div className="font-semibold mb-1">Healthcare access</div>
+      <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-sm border border-border rounded-xl p-3 text-xs space-y-1.5 shadow-sm">
+        <div className="font-semibold mb-1 text-slate-900">Healthcare access</div>
         {[
           { c: "#800026", l: "Very High (1200+)" },
           { c: "#E31A1C", l: "High (600-1200)" },
@@ -34,7 +30,7 @@ export function IndiaMap({ facilities }: Props) {
         ].map((r) => (
           <div key={r.l} className="flex items-center gap-2">
             <span className="h-2.5 w-2.5 rounded-full" style={{ background: r.c }} />
-            <span className="text-muted-foreground">{r.l}</span>
+            <span className="text-slate-600">{r.l}</span>
           </div>
         ))}
       </div>

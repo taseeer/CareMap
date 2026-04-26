@@ -11,7 +11,7 @@ import { toast } from "sonner";
 export const Route = createFileRoute("/upload")({
   head: () => ({
     meta: [
-      { title: "Upload Hospital Data — MedDesert AI" },
+      { title: "Upload Hospital Data — CareMap" },
       { name: "description", content: "Upload an Excel file of Indian hospital records to analyze for medical deserts and trust scores." },
     ],
   }),

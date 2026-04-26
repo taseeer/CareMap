@@ -1,11 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useFacilityStore } from "@/lib/store";
-import { IndiaMap } from "@/components/IndiaMap";
 
 export const Route = createFileRoute("/map")({
   head: () => ({
     meta: [
-      { title: "India Healthcare Map — MedDesert AI" },
+      { title: "Healthcare Facility Map — CareMap" },
       { name: "description", content: "Interactive map of Indian medical facilities color-coded by trust score and access level." },
     ],
   }),
@@ -20,8 +19,11 @@ function MapPage() {
     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8 space-y-6">
       <div className="flex flex-wrap items-end justify-between gap-3">
         <div>
-          <h1 className="text-3xl font-bold tracking-tight">India healthcare map</h1>
+          <h1 className="text-3xl font-bold tracking-tight">Healthcare Facility Map</h1>
           <p className="text-sm text-muted-foreground mt-1">
+            Color-coded by trust score (Green = Verified, Yellow = Needs Review, Red = Medical Desert)
+          </p>
+          <p className="text-xs text-muted-foreground mt-2">
             {withCoords.length} of {facilities.length} facilities mapped · click a marker for details
           </p>
         </div>
@@ -29,7 +31,11 @@ function MapPage() {
 
       <div className="grid lg:grid-cols-3 gap-6">
         <div className="lg:col-span-2">
-          <IndiaMap facilities={withCoords} />
+          <iframe
+            src="/india_heatmap_real.html"
+            className="w-full h-[calc(100vh-200px)] border-0 rounded-lg bg-card"
+            title="India Healthcare Map"
+          />
         </div>
         <aside className="rounded-2xl border border-border bg-card p-5 space-y-4">
           <div>
@@ -53,7 +59,8 @@ function MapPage() {
             </li>
           </ul>
           <div className="pt-4 border-t border-border text-xs text-muted-foreground">
-            Tip: facilities without lat/long are excluded from the map. Add coordinates to your dataset to plot them.
+            {withCoords.length} of {facilities.length} facilities currently have coordinates.
+            Tip: add lat/long to plot more facilities.
           </div>
         </aside>
       </div>

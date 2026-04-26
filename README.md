@@ -1,4 +1,4 @@
-# MedDesert AI — Healthcare Intelligence
+# CareMap — Healthcare Intelligence for India
 
 AI-powered analysis of Indian hospital records to identify medical deserts and verify facility claims. Built for **Hack-Nation Challenge #3 — Agentic Healthcare Maps**.
 

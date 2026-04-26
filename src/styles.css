@@ -42,59 +42,80 @@
 :root {
   --radius: 0.625rem;
 
-  /* Midnight Data palette */
-  --background: oklch(0.13 0.03 270);
-  --foreground: oklch(0.96 0.01 260);
+  /* Clean healthcare light palette */
+  --background: #f0f4f8; /* light blue-gray */
+  --foreground: #0f172a; /* slate-900 */
 
-  --surface: oklch(0.17 0.04 270);
-  --surface-elevated: oklch(0.21 0.05 270);
+  --surface: #f8fafc; /* slate-50 */
+  --surface-elevated: #ffffff;
 
-  --card: oklch(0.17 0.04 270);
-  --card-foreground: oklch(0.96 0.01 260);
-  --popover: oklch(0.19 0.05 270);
-  --popover-foreground: oklch(0.96 0.01 260);
+  --card: #ffffff;
+  --card-foreground: #0f172a;
+  --popover: #ffffff;
+  --popover-foreground: #0f172a;
 
-  --primary: oklch(0.62 0.21 275);
-  --primary-foreground: oklch(0.99 0 0);
-  --primary-glow: oklch(0.72 0.19 280);
+  /* Primary/secondary per spec */
+  --primary: #0ea5e9; /* sky-500 */
+  --primary-foreground: #ffffff;
+  --primary-glow: #38bdf8; /* sky-400 */
 
-  --secondary: oklch(0.24 0.05 270);
-  --secondary-foreground: oklch(0.96 0.01 260);
+  --secondary: #8b5cf6; /* violet-500 */
+  --secondary-foreground: #ffffff;
 
-  --muted: oklch(0.22 0.04 270);
-  --muted-foreground: oklch(0.7 0.03 265);
+  --muted: #f1f5f9; /* slate-100 */
+  --muted-foreground: #64748b; /* slate-500 */
 
-  --accent: oklch(0.27 0.07 275);
-  --accent-foreground: oklch(0.96 0.01 260);
+  --accent: #e0f2fe; /* sky-100 */
+  --accent-foreground: #0f172a;
 
-  --destructive: oklch(0.62 0.23 25);
-  --destructive-foreground: oklch(0.99 0 0);
+  --destructive: #ef4444; /* red-500 */
+  --destructive-foreground: #ffffff;
 
-  --success: oklch(0.7 0.18 155);
-  --success-foreground: oklch(0.1 0.02 270);
+  --success: #10b981; /* emerald-500 */
+  --success-foreground: #052e16;
 
-  --warning: oklch(0.78 0.16 80);
-  --warning-foreground: oklch(0.15 0.02 80);
+  --warning: #f59e0b; /* amber-500 */
+  --warning-foreground: #451a03;
 
-  --danger: oklch(0.65 0.24 22);
-  --danger-foreground: oklch(0.99 0 0);
+  --danger: #ef4444; /* red-500 */
+  --danger-foreground: #ffffff;
 
-  --border: oklch(0.27 0.05 270);
-  --input: oklch(0.24 0.05 270);
-  --ring: oklch(0.62 0.21 275);
+  --border: #e2e8f0; /* slate-200 */
+  --input: #ffffff;
+  --ring: #0ea5e9;
 
   /* Gradients & effects */
-  --gradient-primary: linear-gradient(135deg, oklch(0.62 0.21 275), oklch(0.72 0.19 280));
-  --gradient-surface: linear-gradient(180deg, oklch(0.17 0.04 270), oklch(0.13 0.03 270));
-  --gradient-glow: radial-gradient(ellipse at top, oklch(0.62 0.21 275 / 0.25), transparent 70%);
-  --shadow-elegant: 0 10px 40px -10px oklch(0.62 0.21 275 / 0.35);
-  --shadow-card: 0 4px 24px -8px oklch(0.05 0.02 270 / 0.6);
+  --gradient-primary: linear-gradient(135deg, #0ea5e9, #8b5cf6);
+  --gradient-surface: linear-gradient(180deg, #ffffff, #f8fafc);
+  --gradient-glow: radial-gradient(ellipse at top, rgba(14, 165, 233, 0.10), transparent 60%);
+  --shadow-elegant: 0 14px 32px -18px rgba(14, 165, 233, 0.35);
+  --shadow-card: 0 1px 2px rgba(2, 6, 23, 0.06), 0 8px 18px -12px rgba(2, 6, 23, 0.12);
 }
 
 .dark {
-  /* same as :root – app is dark by default */
-  --background: oklch(0.13 0.03 270);
-  --foreground: oklch(0.96 0.01 260);
+  --background: #0f172a;
+  --foreground: #f1f5f9;
+
+  --surface: #0f172a;
+  --surface-elevated: #111c2f;
+
+  --card: #1e293b;
+  --card-foreground: #f1f5f9;
+  --popover: #1e293b;
+  --popover-foreground: #f1f5f9;
+
+  --muted: #0b1220;
+  --muted-foreground: #94a3b8;
+
+  --accent: rgba(14, 165, 233, 0.14);
+  --accent-foreground: #f1f5f9;
+
+  --border: #334155;
+  --input: rgba(148, 163, 184, 0.10);
+
+  --gradient-surface: linear-gradient(180deg, #1e293b, #0f172a);
+  --gradient-glow: radial-gradient(ellipse at top, rgba(14, 165, 233, 0.16), transparent 60%);
+  --shadow-card: 0 12px 30px -18px rgba(0, 0, 0, 0.70);
 }
 
 @layer base {
@@ -105,12 +126,30 @@
   html, body {
     background-color: var(--color-background);
     color: var(--color-foreground);
-    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    text-rendering: optimizeLegibility;
   }
 
   body {
-    background-image: var(--gradient-glow);
-    background-attachment: fixed;
+    background-image: none;
     min-height: 100vh;
+    line-height: 1.55;
+  }
+}
+
+@layer utilities {
+  .hover-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    will-change: transform;
+  }
+  .hover-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-card);
+  }
+  .gradient-text {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
   }
 }

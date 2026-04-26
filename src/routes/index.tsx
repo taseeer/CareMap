@@ -1,18 +1,20 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 import { useFacilityStore } from "@/lib/store";
 import { buildDashboardSummary } from "@/lib/aggregate";
 import { facilitiesToCsv, downloadBlob } from "@/lib/exportCsv";
 import {
-  Activity, Building2, AlertOctagon, ShieldCheck, TrendingDown,
+  Activity, Hospital, Ambulance, BadgeCheck, HeartPulse,
   Download, ArrowRight, MapPin,
 } from "lucide-react";
 import { TrustBadge } from "@/components/TrustBadge";
+import { mockFacilitySearch } from "@/lib/mockFacilitySearch";
+import { toast } from "sonner";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Dashboard — MedDesert AI" },
+      { title: "Dashboard — CareMap" },
       { name: "description", content: "Healthcare intelligence dashboard with medical desert insights and trust scores." },
     ],
   }),
@@ -22,10 +24,29 @@ export const Route = createFileRoute("/")({
 function Dashboard() {
   const { facilities, source, fileName } = useFacilityStore();
   const summary = useMemo(() => buildDashboardSummary(facilities), [facilities]);
+  const [query, setQuery] = useState("");
+  const [searching, setSearching] = useState(false);
+  const [searchResult, setSearchResult] = useState<Awaited<ReturnType<typeof mockFacilitySearch>> | null>(null);
 
   const handleExport = () => {
     const csv = facilitiesToCsv(facilities);
     downloadBlob(csv, "facilities-analysis.csv", "text/csv");
+  };
+
+  const runSearch = async (q: string) => {
+    const trimmed = q.trim();
+    if (!trimmed) return;
+    setSearching(true);
+    try {
+      const res = await mockFacilitySearch(trimmed);
+      setSearchResult(res);
+      toast.success(res.source === "api" ? "Live results loaded" : "Loaded demo fallback results");
+    } catch (e) {
+      console.error(e);
+      toast.error("Search failed");
+    } finally {
+      setSearching(false);
+    }
   };
 
   return (
@@ -63,17 +84,102 @@ function Dashboard() {
         </div>
       </section>
 
+      {/* Search */}
+      <section className="rounded-3xl border border-border bg-card p-6 sm:p-8 shadow-[var(--shadow-card)]">
+        <div className="flex flex-col sm:flex-row sm:items-end gap-3">
+          <div className="flex-1">
+            <h2 className="text-lg font-semibold">Search healthcare facilities</h2>
+            <p className="text-sm text-muted-foreground mt-1">Ask in natural language (powered by CareMap API)</p>
+            <div className="mt-4 flex gap-2">
+              <input
+                value={query}
+                onChange={(e) => setQuery(e.target.value)}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter") runSearch(query);
+                }}
+                placeholder='Try: "Emergency surgery in Bihar"'
+                className="w-full bg-input border border-border rounded-xl px-4 py-3 text-sm outline-none focus:border-primary"
+              />
+              <button
+                onClick={() => runSearch(query)}
+                disabled={searching}
+                className="shrink-0 inline-flex items-center justify-center px-4 py-3 rounded-xl text-sm font-semibold text-primary-foreground disabled:opacity-50"
+                style={{ background: "var(--gradient-primary)" }}
+              >
+                {searching ? "Searching…" : "Search"}
+              </button>
+            </div>
+            <div className="mt-3 flex flex-wrap gap-2">
+              {[
+                "Emergency surgery in Bihar",
+                "Eye hospitals in Hyderabad",
+                "Neonatal care in Rajasthan",
+              ].map((chip) => (
+                <button
+                  key={chip}
+                  onClick={() => {
+                    setQuery(chip);
+                    runSearch(chip);
+                  }}
+                  className="text-xs px-3 py-1.5 rounded-full border border-border bg-surface hover:bg-accent transition-colors"
+                >
+                  {chip}
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {searchResult && (
+          <div className="mt-6 space-y-3">
+            {searchResult.careguideMessage && (
+              <div className="rounded-2xl border border-border bg-surface p-4 text-sm">
+                <div className="font-semibold">CareGuide</div>
+                <div className="text-muted-foreground mt-1">{searchResult.careguideMessage}</div>
+                {searchResult.emergencyNote && (
+                  <div className="mt-2 text-xs text-danger">{searchResult.emergencyNote}</div>
+                )}
+              </div>
+            )}
+            <div className="grid gap-3">
+              {searchResult.facilities.length === 0 ? (
+                <div className="rounded-2xl border border-border bg-surface p-6 text-sm text-muted-foreground">
+                  No results returned.
+                </div>
+              ) : (
+                searchResult.facilities.map((f) => (
+                  <div key={f.id} className="rounded-2xl border border-border bg-card p-5 hover-card shadow-[var(--shadow-card)]">
+                    <div className="flex flex-wrap items-start justify-between gap-3">
+                      <div className="min-w-0">
+                        <div className="text-sm font-semibold truncate">{f.facility_name}</div>
+                        <div className="text-xs text-muted-foreground mt-1">{f.city}{f.state ? `, ${f.state}` : ""}</div>
+                      </div>
+                      <TrustBadge label={f.trustLabel} score={f.trustScore} />
+                    </div>
+                    {f.unstructured_notes && (
+                      <div className="mt-3 text-sm text-muted-foreground">
+                        {f.unstructured_notes}
+                      </div>
+                    )}
+                  </div>
+                ))
+              )}
+            </div>
+          </div>
+        )}
+      </section>
+
       {/* Stat cards */}
       <section className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-        <StatCard icon={Building2} label="Facilities Analyzed" value={summary.totalFacilities.toLocaleString()} hint={`${summary.totalDistricts} districts`} tone="primary" />
-        <StatCard icon={AlertOctagon} label="Medical Deserts" value={summary.medicalDeserts.length.toString()} hint="ICU rate < 20%" tone="danger" />
-        <StatCard icon={ShieldCheck} label="Verified Facilities" value={summary.verifiedCount.toString()} hint={`${Math.round((summary.verifiedCount / Math.max(1, summary.totalFacilities)) * 100)}% of total`} tone="success" />
-        <StatCard icon={TrendingDown} label="Avg Trust Score" value={summary.avgTrustScore.toFixed(1)} hint="0–100 scale" tone="warning" />
+        <StatCard icon={Hospital} label="Facilities Analyzed" value={summary.totalFacilities.toLocaleString()} hint={`${summary.totalDistricts} districts`} tone="primary" />
+        <StatCard icon={Ambulance} label="Medical Deserts" value={summary.medicalDeserts.length.toString()} hint="ICU rate < 20%" tone="danger" />
+        <StatCard icon={BadgeCheck} label="Verified Facilities" value={summary.verifiedCount.toString()} hint={`${Math.round((summary.verifiedCount / Math.max(1, summary.totalFacilities)) * 100)}% of total`} tone="success" />
+        <StatCard icon={HeartPulse} label="Avg Trust Score" value={summary.avgTrustScore.toFixed(1)} hint="0–100 scale" tone="warning" />
       </section>
 
       {/* Top attention + Trust breakdown */}
       <section className="grid lg:grid-cols-3 gap-6">
-        <div className="lg:col-span-2 rounded-2xl border border-border bg-card p-6">
+        <div className="lg:col-span-2 rounded-2xl border border-border bg-card p-6 shadow-[var(--shadow-card)]">
           <div className="flex items-center justify-between mb-5">
             <div>
               <h2 className="text-lg font-semibold">Top 5 districts needing attention</h2>
@@ -103,7 +209,7 @@ function Dashboard() {
           </div>
         </div>
 
-        <div className="rounded-2xl border border-border bg-card p-6">
+        <div className="rounded-2xl border border-border bg-card p-6 shadow-[var(--shadow-card)]">
           <h2 className="text-lg font-semibold mb-1">Trust distribution</h2>
           <p className="text-xs text-muted-foreground mb-5">Across all analyzed facilities</p>
           <TrustBar verified={summary.verifiedCount} review={summary.needsReviewCount} suspicious={summary.suspiciousCount} />
@@ -126,13 +232,13 @@ function Dashboard() {
 
 function StatCard({ icon: Icon, label, value, hint, tone }: { icon: React.ComponentType<{ className?: string }>; label: string; value: string; hint?: string; tone: "primary" | "danger" | "success" | "warning" }) {
   const colors = {
-    primary: "text-primary bg-primary/10 border-primary/20",
-    danger: "text-danger bg-danger/10 border-danger/20",
-    success: "text-success bg-success/10 border-success/20",
-    warning: "text-warning bg-warning/10 border-warning/20",
+    primary: "text-primary bg-[#e0f2fe] border-[#bae6fd]",
+    danger: "text-danger bg-[#fee2e2] border-[#fecaca]",
+    success: "text-success bg-[#d1fae5] border-[#a7f3d0]",
+    warning: "text-warning bg-[#fef3c7] border-[#fde68a]",
   } as const;
   return (
-    <div className="rounded-2xl border border-border bg-card p-5">
+    <div className="rounded-2xl border border-border bg-card p-5 hover-card shadow-[var(--shadow-card)]">
       <div className={`inline-flex h-10 w-10 items-center justify-center rounded-xl border ${colors[tone]}`}>
         <Icon className="h-5 w-5" />
       </div>
@@ -170,7 +276,7 @@ function Row({ label, value, total, colorVar }: { label: string; value: number; 
 function DistrictList({ title, subtitle, items, tone }: { title: string; subtitle: string; items: { district: string; state: string; facilityCount: number; icuRate: number; avgTrustScore: number }[]; tone: "danger" | "success" }) {
   const accent = tone === "danger" ? "var(--color-danger)" : "var(--color-success)";
   return (
-    <div className="rounded-2xl border border-border bg-card p-6">
+    <div className="rounded-2xl border border-border bg-card p-6 shadow-[var(--shadow-card)]">
       <h2 className="text-lg font-semibold">{title}</h2>
       <p className="text-xs text-muted-foreground mb-4">{subtitle}</p>
       {items.length === 0 ? (

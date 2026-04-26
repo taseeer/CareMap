@@ -11,7 +11,7 @@ type LabelFilter = "all" | "Verified" | "Needs Review" | "Suspicious";
 export const Route = createFileRoute("/facilities")({
   head: () => ({
     meta: [
-      { title: "Facilities — MedDesert AI" },
+      { title: "Facilities — CareMap" },
       { name: "description", content: "Search, filter, and sort analyzed Indian healthcare facilities." },
     ],
   }),
