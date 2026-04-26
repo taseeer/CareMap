@@ -2,6 +2,8 @@ import { Outlet, createRootRoute, HeadContent, Scripts } from "@tanstack/react-r
 import appCss from "../styles.css?url";
 import { AppShell } from "@/components/AppShell";
 import { Toaster } from "@/components/ui/sonner";
+import { SplashScreen } from "@/components/SplashScreen";
+import { useEffect, useState } from "react";
 
 function NotFoundComponent() {
   return (
@@ -52,8 +54,21 @@ function RootShell({ children }: { children: React.ReactNode }) {
 }
 
 function RootComponent() {
+  const [showSplash, setShowSplash] = useState(true);
+  const [hiding, setHiding] = useState(false);
+
+  useEffect(() => {
+    const t1 = window.setTimeout(() => setHiding(true), 2500);
+    const t2 = window.setTimeout(() => setShowSplash(false), 2800);
+    return () => {
+      window.clearTimeout(t1);
+      window.clearTimeout(t2);
+    };
+  }, []);
+
   return (
     <>
+      {showSplash && <SplashScreen hiding={hiding} />}
       <AppShell>
         <Outlet />
       </AppShell>
